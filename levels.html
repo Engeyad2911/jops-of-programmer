@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data & Experiences Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            color: #ddd;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #06eb1d;
+        }
+        .categories h2 {
+    text-align: center;
+    font-size: var(--h2-font);
+    font-weight: 600;
+}
+
+
+.category-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(218px, auto));
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 4.2rem;
+}
+
+.category-row img {
+    height: auto;
+    width: 100%;
+    border-radius: 28px;
+    margin-bottom: 1.4rem;
+}
+
+.category-row {
+    background: rgba(255, 255, 255, 0.296);
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    border-bottom: 5px solid transparent;
+    box-shadow: 3px 3px 5px rgba(228, 228, 228, 0.726);
+    padding: 20px;
+    transition: all .80s ease;
+}
+
+.category-row i {
+    font-size: 1.9rem;
+    color: var(--main-color);
+    background: var(--bg-color);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* .main-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+} */
+
+.category-row h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
+.category-row p {
+    font-size: 13px;
+    color: var(--p-color);
+}
+
+
+
+.category-row:hover {
+    border-bottom: 5px solid #9372ffe2;
+    background-color: var(--other-color);
+    transform: translateY(-5px) scale(1.03);
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#jobs">Jobs</a>
+    </div>
+    <div class="container">
+        <div id="personal-data">
+            <center> <h2>Personal Data</h2>
+            <form id="personal-data-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Send</button>
+                </div>
+</center>
+<br>
+            </form>
+            <br><br>
+            
+            <div id="personal-data-message"></div>
+        </div>
+        
+        <div id="experiences-skills">
+                <center>
+                <h2>Experiences and Skills</h2>
+                <form id="experiences-skills-form">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Experience:</label>
+                        <input type="text" id="experience" name="experience" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn  btn-success">Send</button>
+                </div>
+                <br>
+            </form>
+            <div id="experiences-skills-message"></div>
+        </div>
+    </div>
+</center>
+    <center>
+        <div id="about">
+            <h2>About</h2>
+            <br>
+            <p>Some random words here...</p>
+            <br>
+            <img src="(3)about image.png" alt="About Us" class="img-fluid">
+        </div>
+    </center>
+    <br><br><br>
+    <br>
+
+
+
+    <section class="categories" id="jobs">
+        <div data-aos="">
+            <h2>Browse <span>Job Category</span></h2>
+        </div>
+        <div class="category-content" data-aos="zoom-in-down">
+            <div class="category-row">
+                <i class="ri-image-circle-line"></i><br>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Art & Design</h5>
+                        <p>3500 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-stack-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>UI/UX Design</h5>
+                        <p>750 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-stack-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>UI/UX Design</h5>
+                        <p>750 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-stack-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>UI/UX Design</h5>
+                        <p>750 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-stack-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>UI/UX Design</h5>
+                        <p>750 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-stack-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>UI/UX Design</h5>
+                        <p>750 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-windows-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>IT & Software</h5>
+                        <p>8520 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-building-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Busniness Development</h5>
+                        <p>120 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-home-5-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Property</h5>
+                        <p>1200 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-edit-circle-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Marketing</h5>
+                        <p>1920 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-graduation-cap-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Education</h5>
+                        <p>10k Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <i class="ri-money-dollar-circle-line"></i>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Accounting & Finance</h5>
+                        <p>2200 Job Vacancy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <script>
+        document.getElementById('personal-data-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            const password = formData.get('password');
+
+            // Send the data to the server using AJAX or Fetch API
+            // Display a success or error message
+        });
+
+        document.getElementById('experiences-skills-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const age = formData.get('age');
+            const experience = formData.get('experience');
+            const location = formData.get('location');
+            const skills = formData.get('skills');
+
+            // Send the data to the server using AJAX or Fetch API
+            // Display a success or error message
+        });
+    </script>
+</body>
+</html>
